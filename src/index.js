@@ -49,6 +49,11 @@ function Greet(props) { // takes data => returns elements
   //must return something
   // return `Hello ${name}`
   // return null
+  if (!name) {
+    return <div className='container'>
+      Hey, the Greet component wants a prop called name
+    </div>
+  }
   return (
     //do wrap everything in a top level div
     <div className={className}>
@@ -58,7 +63,7 @@ function Greet(props) { // takes data => returns elements
   )
 }
 render(
-  <Greet />,
+  <Greet name="David" />,
   document.getElementById('greet')
 )
 

@@ -24,7 +24,7 @@ render (
 
 function HelloWorld(props) {
   return (
-    <div>Hello {props.name}!!!</div>
+    <div>Hello {props.name}!!! You are {props.age}</div>
   )
 }
 /*
@@ -41,8 +41,18 @@ function HelloWorld(props) {
   - We can interpolate attribute values, and content
   - We can validate the props
 */
-function Greet() { // takes data => returns elements
-
+function Greet(props) { // takes data => returns elements
+  const { name } = props
+  //must return something
+  // return `Hello ${name}`
+  // return null
+  return (
+    //do wrap everything in a top level div
+    <div>
+      <h1>Greet Component</h1>
+      <div>Hello, {name}</div>
+    </div>
+  )
 }
 
 

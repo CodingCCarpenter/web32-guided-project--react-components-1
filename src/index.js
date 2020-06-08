@@ -1,18 +1,4 @@
-// 👉 Importing React libs from node_modules folder (see package.json)
-// to make React components
-// to append a React tree of components to the DOM
-
-// 👉 Importing a React component from another file
-// RockPaperScissors
-// FamilyTree
-
-
-/*
-💥💥💥 TASK 1A- Mounting a React element to the DOM (often only once per app) 💥💥💥
-  👉 execute the 'render' named export from react-dom
-  👉 1st ARG - React element (or React component "invoked")
-  👉 2nd ARG - DOM element to append to
-*/
+https://github.com/CodingCCarpenter/web32-guided-project--react-components-1.git
 
 
 /*
@@ -46,6 +32,11 @@ function Greet() { // takes data => returns elements
   <Greet person='Michael' emphasis={false} />  // props is object with { person: 'Michael', emphasis: false }
   <Greet person='Sarah' />                     // props is object with { person: 'Sarah' }
 */
+function HelloWorld(props) {
+  return (
+    <div>Hello World!!!</div>
+  )
+}
 
 
 

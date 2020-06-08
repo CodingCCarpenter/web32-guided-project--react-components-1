@@ -14,17 +14,18 @@ import render from 'react-dom';
   👉 1st ARG - React element (or React component "invoked")
   👉 2nd ARG - DOM element to append to
 */
+const name='Maryam';
 
 render (
   //what React elements do we want to inject (not DOM elements)
-  <HelloWorld name='Maryam' age='25'></HelloWorld>,
+  <HelloWorld name={name} age='25'></HelloWorld>,
   //where actual DOM node
   document.getElementById('helloWorld'),
 )
 
 function HelloWorld(props) {
   return (
-    <div>Hello {props.name}!!! You are {props.age}</div>
+    <div className='container'>Hello {props.name}!!! You are {props.age}</div>
   )
 }
 /*
@@ -41,19 +42,25 @@ function HelloWorld(props) {
   - We can interpolate attribute values, and content
   - We can validate the props
 */
+
 function Greet(props) { // takes data => returns elements
-  const { name } = props
+  const { name } = props;
+  const className = 'container'
   //must return something
   // return `Hello ${name}`
   // return null
   return (
     //do wrap everything in a top level div
-    <div>
+    <div className={className}>
       <h1>Greet Component</h1>
       <div>Hello, {name}</div>
     </div>
   )
 }
+render(
+  <Greet />,
+  document.getElementById('greet')
+)
 
 
 /*
